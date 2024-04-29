@@ -8,7 +8,7 @@ import Register from './components/Auth/Register'
 import Navbar from './components/Layout/Navbar'
 import Footer from './components/Layout/Footer'
 // import Jobs from './components/Job/Jobs'
-// import Home from './components/Home/Home'
+import Home from './components/Home/Home'
 // import JobDetails from './components/Job/JobDetails'
 // import PostJob from './components/Job/PostJob'
 // import MyJobs from './components/Job/MyJobs'
@@ -48,8 +48,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/job/getall" element={<Jobs />} />
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/job/getall" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
           <Route path="/application/:id" element={<Application />} />
           <Route path="/applications/me" element={<MyApplications />} />
