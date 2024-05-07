@@ -10,7 +10,7 @@ import Footer from './components/Layout/Footer'
 import Jobs from './components/Job/Jobs'
 import Home from './components/Home/Home'
 import JobDetails from './components/Job/JobDetails'
-// import PostJob from './components/Job/PostJob'
+import PostJob from './components/Job/PostJob'
 // import MyJobs from './components/Job/MyJobs'
 // import Application from './components/Application/Application'
 // import MyApplication from './components/Application/MyApplication'
@@ -51,9 +51,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/job/getall" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
+          <Route path="/job/post" element={<PostJob />} />
           {/* <Route path="/application/:id" element={<Application />} />
           <Route path="/applications/me" element={<MyApplications />} />
-          <Route path="/job/post" element={<PostJob />} />
           <Route path="/job/me" element={<MyJobs />} /> */}
           <Route path="/notfound" element={<NotFound />} />
         </Routes>
