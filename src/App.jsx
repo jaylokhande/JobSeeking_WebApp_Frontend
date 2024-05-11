@@ -12,7 +12,7 @@ import Home from './components/Home/Home'
 import JobDetails from './components/Job/JobDetails'
 import PostJob from './components/Job/PostJob'
 import MyJobs from './components/Job/MyJobs'
-// import Application from './components/Application/Application'
+import Application from './components/Application/Application'
 // import MyApplication from './components/Application/MyApplication'
 import NotFound from './components/NotFound/NotFound'
 import axios from 'axios'
@@ -52,7 +52,8 @@ function App() {
           <Route path="/job/getall" element={<Jobs />} />
           <Route path="/job/:id" element={<JobDetails />} />
           <Route path="/job/post" element={<PostJob />} />
-          {/* <Route path="/application/:id" element={<Application />} />
+          <Route path="/application/:id" element={<Application />} />
+          {/* 
           <Route path="/applications/me" element={<MyApplications />} />
           */}
           <Route path="/job/me" element={<MyJobs />} /> 
