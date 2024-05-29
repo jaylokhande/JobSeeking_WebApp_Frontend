@@ -178,6 +178,9 @@ const EmployerCard = ({ element, openModal }) => {
           <p>
             <span>CoverLetter:</span> {element.coverLetter}
           </p>
+          <p>
+            <span>Role:</span> {element.role_apply} 
+          </p>
         </div>
         <div className="resume">
           <img
