@@ -62,8 +62,22 @@ const MyApplications = () => {
   const openModal = (imageUrl) => {
     setResumeImageUrl(imageUrl);
     setModalOpen(true);
+    if(user.role === "Employer"){
+        try{
+          const {data} = axios.post('http://localhost:4000/api/v1/application/notification/view/',{imageUrl},
+            {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          })
+        }catch(error){
+          toast.error(error.response.data.message);
+        }
+    }
   };
 
+  
   const closeModal = () => {
     setModalOpen(false);
   };
