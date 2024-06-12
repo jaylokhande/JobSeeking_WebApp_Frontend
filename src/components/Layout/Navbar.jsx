@@ -50,6 +50,7 @@ const Navbar = () => {
                 : "MY APPLICATIONS"}
             </Link>
           </li>
+          
           {user && user.role === "Employer" ? (
             <>
               <li>
@@ -64,7 +65,13 @@ const Navbar = () => {
               </li>
             </>
           ) : (
-            <></>
+            <>
+             <li>
+                <Link to={"/application/notification/list"} onClick={() => setShow(false)}>
+                  NOTIFICATION
+                </Link>
+              </li>
+            </>
           )}
 
           <button onClick={handleLogout}>LOGOUT</button>

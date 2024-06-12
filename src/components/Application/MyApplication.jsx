@@ -22,6 +22,7 @@ const MyApplications = () => {
             withCredentials: true,
           })
           .then((res) => {
+            console.log(res);
             setApplications(res.data.applications);
           });
       } else {
@@ -30,6 +31,7 @@ const MyApplications = () => {
             withCredentials: true,
           })
           .then((res) => {
+            console.log(res);
             setApplications(res.data.applications);
           });
       }

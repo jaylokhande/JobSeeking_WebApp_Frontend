@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Context } from "./main";
+
 import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
 import Navbar from './components/Layout/Navbar'
@@ -15,11 +16,13 @@ import MyJobs from './components/Job/MyJobs'
 import Application from './components/Application/Application'
 import MyApplication from './components/Application/MyApplication'
 import NotFound from './components/NotFound/NotFound'
+import ApplicationNotification from './components/Application/ApplicationNotification'
 import axios from 'axios'
 import { Toaster } from 'react-hot-toast'
 
 
-import { BrowserRouter, Route, Routes  } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation  } from 'react-router-dom'
+import ApplicationView from './components/Application/ApplicationNotification';
 
 function App() {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
@@ -56,7 +59,11 @@ function App() {
           <Route path="/applications/me" element={< MyApplication />} />
           <Route path="/job/me" element={<MyJobs />} /> 
           <Route path="/notfound" element={<NotFound />} />
+          <Route path="/application/view" element={<ApplicationView/>}/>
+          <Route path="/application/notification/list"element={<ApplicationNotification/>}/>
+          
         </Routes>
+        
         <Footer />
         <Toaster />
       </BrowserRouter>
